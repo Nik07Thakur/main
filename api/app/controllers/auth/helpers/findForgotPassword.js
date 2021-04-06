@@ -7,7 +7,7 @@ const { itemNotFound } = require('../../../middleware/utils')
  */
 const findForgotPassword = (id = '') => {
   return new Promise((resolve, reject) => {
-    ForgotPassword.findOne(
+    ForgotPassword.findOne(  
       {
         verification: id,
         used: false
