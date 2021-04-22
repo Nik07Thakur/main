@@ -45,7 +45,7 @@
             </p>
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-            <a class="dropdown-item" href="#">Profile</a>
+            <a class="dropdown-item" href="<?php echo base_url('profile'); ?>">Profile</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Log out</a>
           </div>

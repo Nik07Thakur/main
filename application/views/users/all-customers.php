@@ -25,6 +25,9 @@
                     <th>
                       Role
                     </th>
+                    <th>
+                      Action
+                    </th>
                   </thead>
                   <tbody>
                   	<?php 
@@ -35,7 +38,7 @@
                         ?>
                     <tr>
                       <td>
-                        <?php  echo $customer->name; ?>
+                        <?php  echo $customer->firstname." ".$customer->lastname; ?>
                       </td>
                       <td>
                         <?php  echo $customer->email; ?>
@@ -46,7 +49,9 @@
                       <td>
                         <?php  echo $customer->role; ?>
                       </td>
-                      
+                      <td>
+                        <a href="<?php echo base_url('deleteCustomer');?>/<?php echo $customer->_id; ?>" data-toggle="tooltip" style="color:red;" data-placement="top" name="delete" onclick='return confirm("Do you want delete this customer")' title="Delete"><i class="fa fa-trash"></i></a>
+                      </td>
                     </tr>
                 <?php  } }?>
                   </tbody>

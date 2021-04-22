@@ -4,7 +4,7 @@
 
     Tip 2: you can also add an image using data-image tag
 -->
-  <div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
+  <div class="logo"><a href="#" class="simple-text logo-normal">
       Creative Tim
     </a></div>
   <div class="sidebar-wrapper">
@@ -13,10 +13,10 @@
         <img src="<?php echo base_url('assets/img/faces/avatar.jpg'); ?>">
       </div>
       <div class="user-info">
-        <a data-toggle="collapse" href="#collapseExample" class="username collapsed" aria-expanded="false">
+      <a href="<?php echo base_url('profile'); ?>" class="username" aria-expanded="false">
           <span>
             <?php
-              echo $currentUser[0]->name; ?>
+              echo $currentUser[0]->firstname." ".$currentUser[0]->lastname; ?>
           </span>
         </a>
       </div>

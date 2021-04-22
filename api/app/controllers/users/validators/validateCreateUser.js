@@ -44,6 +44,18 @@ const validateCreateUser = [
     .not()
     .isEmpty()
     .withMessage('IS_EMPTY'),
+  check('address')
+    .exists()
+    .withMessage('MISSING')
+    .not()
+    .isEmpty()
+    .withMessage('IS_EMPTY'),
+  check('image')
+    .exists()
+    .withMessage('MISSING')
+    .not()
+    .isEmpty()
+    .withMessage('IS_EMPTY'),
   check('password')
     .exists()
     .withMessage('MISSING')

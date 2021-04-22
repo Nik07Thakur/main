@@ -36,13 +36,18 @@ const UserSchema = new mongoose.Schema(
       type: String,
       required: true
     },
+    address: {
+      type: String,
+      required: true
+    },
     password: {
       type: String,
       required: true,
       select: false
     },
     image: {
-      type: String
+      data: Buffer,
+      contentType: String
     },
     role: {
       type: String,

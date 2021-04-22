@@ -275,6 +275,17 @@
 
     });
   </script>
+  <script>
+    $(document).ready(function() {
+
+      setTimeout(function() {
+      $('#hide_alert').fadeOut('slow');
+      }, 3000);
+      // Javascript method's body can be found in assetsassets/js/demos.js
+      md.initDashboardPageCharts();
+
+    });
+  </script>
 </body>
 
 </html>

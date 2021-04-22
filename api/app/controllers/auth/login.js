@@ -32,7 +32,7 @@ const login = async (req, res) => {
      // await saveLoginAttemptsToDB(user)
       res.status(200).json(await saveUserAccessAndReturnToken(req, user))
     }
-  } catch (error) {
+  } catch (error) { 
     handleError(res, error)
   }
 }

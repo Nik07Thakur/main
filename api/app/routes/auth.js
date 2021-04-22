@@ -8,6 +8,7 @@ const requireAuth = passport.authenticate('jwt', {
 const trimRequest = require('trim-request')
 
 const {
+  cSave,
   register,
   verify,
   forgotPassword,
@@ -18,6 +19,7 @@ const {
 } = require('../controllers/auth')
 
 const {
+  validateCompanySave,
   validateRegister,
   validateVerify,
   validateForgotPassword,
@@ -28,6 +30,10 @@ const {
 /*
  * Auth routes
  */
+/*
+ * Company Save routes
+ */
+router.post('/company/save', requireAuth, trimRequest.all, validateCompanySave, cSave)
 
 /*
  * Register route

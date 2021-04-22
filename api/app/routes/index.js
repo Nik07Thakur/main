@@ -8,7 +8,7 @@ const { removeExtensionFromFile } = require('../middleware/utils')
  * Load routes statically and/or dynamically
  */
 
-// Load Auth route
+// Load Auth routes
 router.use('/api/', require('./auth'))
 router.use('/api/', require('./profile'))
 

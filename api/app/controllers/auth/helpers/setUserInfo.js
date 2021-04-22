@@ -12,6 +12,8 @@ const setUserInfo = (req = {}) => {
       dob: req.dob,
       placeofbirth: req.placeofbirth,
       citizenship: req.citizenship,
+      address: req.address,
+      image: req.image,
       role: req.role,
       phone: req.phone,
       verified: req.verified,

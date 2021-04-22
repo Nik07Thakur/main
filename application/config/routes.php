@@ -57,3 +57,6 @@ $route['translate_uri_dashes'] = FALSE;
 $route['customers'] = 'AdminController/allCustomers';
 $route['agents'] = 'AdminController/allAgents';
 $route['login'] = 'AdminController/login';
+$route['profile'] = 'AdminController/profile';
+$route['deleteCustomer/(:any)'] = 'AdminController/delete_customer/$1';
+$route['deleteAgent/(:any)'] = 'AdminController/delete_agent/$1';

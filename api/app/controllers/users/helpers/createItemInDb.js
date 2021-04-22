@@ -13,6 +13,8 @@ const createItemInDb = ({
   dob = '',
   placeofbirth = '',
   citizenship = '',
+  address = '',
+  image = '',
   password = '',
   role = '',
   phone = ''
@@ -25,6 +27,8 @@ const createItemInDb = ({
       dob,
       placeofbirth,
       citizenship,
+      address,
+      image,
       password,
       role,
       phone,

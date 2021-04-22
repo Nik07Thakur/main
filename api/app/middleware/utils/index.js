@@ -9,7 +9,7 @@ const { itemNotFound } = require('./itemNotFound')
 const { removeExtensionFromFile } = require('./removeExtensionFromFile')
 const { validateResult } = require('./validateResult')
 
-module.exports = {
+module.exports = { 
   buildErrObject,
   buildSuccObject,
   getBrowserInfo,

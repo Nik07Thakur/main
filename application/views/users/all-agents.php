@@ -25,6 +25,9 @@
                     <th>
                       Role
                     </th>
+                    <th>
+                      Action
+                    </th>
                   </thead>
                   <tbody>
                     <?php 
@@ -32,7 +35,7 @@
                       foreach ($agentsList as $agent) { ?>
                     <tr>
                       <td>
-                        <?php  echo $agent->name; ?>
+                        <?php  echo $agent->firstname." ".$agent->firstname; ?>
                       </td>
                       <td>
                         <?php  echo $agent->email; ?>
@@ -43,7 +46,9 @@
                       <td>
                         <?php  echo $agent->role; ?>
                       </td>
-                      
+                      <td>
+                        <a href="<?php echo base_url('deleteAgent');?>/<?php echo $agent->_id; ?>" data-toggle="tooltip" style="color:red;" data-placement="top" name="delete" onclick='return confirm("Do you want delete this Agent")' title="Delete"><i class="fa fa-trash"></i></a>
+                      </td>
                     </tr>
                 <?php  } }?>
                   </tbody>

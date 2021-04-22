@@ -68,4 +68,41 @@ class AdminController extends CI_Controller {
 		}
 		
 	}
+
+	public function profile(){
+	
+		$data['currentUser'] = $this->session->userdata('userdata');
+		if(isset($_POST['submit'])){
+
+			$update = $this->AdminModel->update($_POST['id'], $_POST['firstname']." ".['lastname'], $_POST['phone']);
+			$user = $this->AdminModel->getUser($data['currentUser'][0]->email);
+
+			if($user){
+				$this->session->set_userdata('userdata',$user);
+
+
+				redirect(base_url('profile?success=true'));
+				
+			 }
+
+		}else{			
+			$this->load->view('profile', $data);
+		}
+		
+	}
+
+	function delete_customer($_id) {
+		if ($_id) {
+            $this->AdminModel->delete_customer($_id);
+        }
+		redirect(base_url('customers'));
+	}
+
+	function delete_agent($_id) {
+		// echo $_id;die;
+		if ($_id) {
+            $this->AdminModel->delete_agent($_id);
+        }
+		redirect(base_url('agents'));
+	}
 }

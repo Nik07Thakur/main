@@ -1,8 +1,8 @@
 const { saveLoginAttemptsToDB } = require('./saveLoginAttemptsToDB')
 const { blockUser } = require('./blockUser')
 const { buildErrObject } = require('../../../middleware/utils')
-const LOGIN_ATTEMPTS = 5
-
+// const LOGIN_ATTEMPTS = 5
+ 
 /**
  * Adds one attempt to loginAttempts, then compares loginAttempts with the constant LOGIN_ATTEMPTS, if is less returns wrong password, else returns blockUser function
  * @param {Object} user - user object

@@ -15,6 +15,8 @@ const registerUser = (req = {}) => {
       dob: req.dob,
       placeofbirth: req.placeofbirth,
       citizenship: req.citizenship,
+      address: req.address,
+      image: req.image,
       password: req.password,
       role: req.role,
       phone: req.phone,
